@@ -10,14 +10,14 @@
     {% include 'usuarios/links.html' %}
     <h1>Lista de Usuários</h1>
     <table>
-        <tr><th>Nome</th><th>Idade</th><th>Ações disponíveis</th></tr>
+        <tr><th>Nome</th><th>Idade</th></tr>
         {% for pessoa in pessoas %}
             <tr>
-                <td>{{ pessoa.nome }}</td><td>{{pessoa.idade }}</td>
+                <td>{{ pessoa.nome }}</td><td>{{ pessoa.idade }}</td>
                 
             </tr>
         {% empty %}
-            <tr><th colspan="5">Ainda não tem usuários cadastrados</th></tr>
+            <tr><th colspan="5">Ainda não há usuários cadastrados.</th></tr>
         {% endfor %}
 </table>
 </body>

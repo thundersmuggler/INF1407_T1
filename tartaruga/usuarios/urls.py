@@ -5,4 +5,5 @@ app_name = 'usuarios'
 
 urlpatterns = [
     path('lista/', views.UsuarioListView.as_view(), name='lista-usuarios'),
-    path('', views.UsuarioListView.as_view(), name='home-usuarios'),]
+    path('', views.UsuarioListView.as_view(), name='home-usuarios'),
+]
