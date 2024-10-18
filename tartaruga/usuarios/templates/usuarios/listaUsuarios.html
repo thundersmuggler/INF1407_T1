@@ -3,18 +3,29 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Lista Usuários</title>
+    <title>Página de usuários</title>
     <link rel="stylesheet" href="{% static 'usuarios/css/estilo.css' %}">
 </head>
 <body>
     {% include 'usuarios/links.html' %}
-    <h1>Lista de Usuários</h1>
+    <h2>Usuários</h2>
     <table>
-        <tr><th>Nome</th><th>Idade</th></tr>
+        <tr>
+            <th>| ID </th>
+            <th>| NOME </th>
+            <th>| IDADE </th>
+            <th>| ENDEREÇO DE E-MAIL </th>
+            <th>| TELEFONE </th>
+            <th>| DATA DE NASCIMENTO </th>
+        </tr>
         {% for pessoa in pessoas %}
             <tr>
-                <td>{{ pessoa.nome }}</td><td>{{ pessoa.idade }}</td>
-                
+                <td>{{ pessoa.id }}</td>
+                <td>{{ pessoa.nome }}</td>
+                <td>{{ pessoa.idade }}</td>
+                <td>{{ pessoa.email }}</td>
+                <td>{{ pessoa.telefone }}</td>
+                <td>{{ pessoa.dtNasc }}</td>
             </tr>
         {% empty %}
             <tr><th colspan="5">Ainda não há usuários cadastrados.</th></tr>

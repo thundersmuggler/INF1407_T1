@@ -10,7 +10,9 @@ class UsuarioListView(View):
         pessoas = Pessoa.objects.all()
         contexto = { 'pessoas': pessoas, }
         return render(request, 'usuarios/listaUsuarios.html', contexto)
-    
-class UsuarioHomeView(View):
+
+class CadastrarUsuarioView(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'usuarios/home.html')
+        pessoas = Pessoa.objects.all()
+        contexto = { 'pessoas': pessoas, }
+        return render(request, 'usuarios/listaUsuarios.html', contexto)
