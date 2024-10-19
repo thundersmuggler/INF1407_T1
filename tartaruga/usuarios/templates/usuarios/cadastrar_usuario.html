@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criar usuário</title>
+    <link rel="stylesheet" href="{% static 'contatos/css/estilo.css' %}">
+</head>
+<body>
+    {% include 'usuarios/links.html' %}
+    <h1>Cadastrar um novo usuário</h1>
+    <form action="" method="POST">
+        <fieldset style="width: max-content;">
+            <legend>Formulário de Cadastro</legend>
+            {% csrf_token %}
+            <table class='formulario'>
+                {{ formulario.as_table }}
+            </table>
+            <button type="submit">Criar usuário</button>
+        </fieldset>
+    </form>
+</body>
